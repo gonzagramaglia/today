@@ -1,6 +1,6 @@
 # 🗓️ Hoy & Today
 
-**Your privacy-first, cloud-synced personal dashboard.**
+**Your privacy-first, local personal dashboard.**
 
 "Hoy & Today" is a minimalist productivity hub designed to keep your focus sharp and your data persistent. It combines smart note-taking, daily task tracking, and quick navigation in a clean, high-performance interface.
 
@@ -9,7 +9,7 @@
 ## ✨ Key Features
 
 ### 📝 Smart Notes
-- **Hybrid Storage**: Your notes are stored locally as a guest, or automatically synced to **Supabase Cloud** when logged in.
+- **Local Storage**: Your notes and tasks are stored securely on your local device.
 - **Auto-Preservation**: A fresh note is automatically generated whenever you clear your workspace.
 - **Rich Formatting**: Markdown support (`*bold*`, `_italics_`) and automated link detection.
 - **Emoji Support**: Native emoji integration via quick-insert shortcuts.
@@ -24,10 +24,7 @@
 - **Auto Reset**: Progress is automatically reset at midnight (Argentina Time 🇦🇷).
 - **Safe Management**: Multi-step confirmation for deletions to prevent data loss.
 
-### ☁️ Authentication & Cloud Sync
-- **Google Auth**: Secure, single-click login.
-- **Cross-Device Persistence**: Your shortcuts and notes follow you anywhere.
-- **Auth Pills**: Premium user profile UI with responsive logout states.
+
 
 ### 🧭 Navigation & Shortcuts
 - **Shortcut Hub**: Dynamic, user-configurable shortcuts with auto-loading favicons.
@@ -42,9 +39,8 @@
 | :--- | :--- |
 | **Framework** | [Next.js 16](https://nextjs.org/) |
 | **State & Flow** | [React 19](https://react.dev/) |
-| **Backend / Sync** | [Supabase](https://supabase.com/) |
 | **Styling** | [Tailwind CSS 4](https://tailwindcss.com/) |
-| **Database/Auth** | Cloud Sync via @supabase/ssr |
+| **Database** | Local Storage |
 | **Type Safety** | [TypeScript](https://www.typescriptlang.org/) |
 | **Icons** | [Lucide React](https://lucide.dev/) |
 | **Web Typography** | [Geist Sans/Mono](https://vercel.com/font) |
@@ -60,7 +56,7 @@
 ### Setup
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/gonzalogramagia/today.git
+   git clone https://github.com/gonzagramaglia/today.git
    cd today
    ```
 
@@ -69,14 +65,7 @@
    yarn install
    ```
 
-3. **Environment Configuration**
-   Create a `.env.local` file with your credentials:
-   ```env
-   NEXT_PUBLIC_SUPABASE_URL=your_supabase_url
-   NEXT_PUBLIC_SUPABASE_ANON_KEY=your_anon_key
-   ```
-
-4. **Run development server**
+3. **Run development server**
    ```bash
    yarn dev
    ```
@@ -93,4 +82,4 @@ Enhance your flow with these productivity tools:
 
 ---
 
-Made with 💛 by [Gonza](https://github.com/gonzalogramagia)
+Made with 💛 by [Gonza](https://github.com/gonzagramaglia)

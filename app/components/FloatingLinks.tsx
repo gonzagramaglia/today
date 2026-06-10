@@ -65,7 +65,7 @@ export default function FloatingLinks({ lang }: FloatingLinksProps) {
       <div className="fixed bottom-8 right-8 flex gap-3 z-[70]">
         {isSettingsOpen ? (
           <a
-            href="https://github.com/gonzalogramagia/today"
+            href="https://github.com/gonzagramaglia/today"
             className="p-3 bg-white border border-zinc-200 rounded-full shadow-lg hover:shadow-xl transition-all hover:scale-110 group"
             aria-label={t.ariaGithub}
             target="_blank"
