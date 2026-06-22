@@ -29,7 +29,16 @@
 ### 🧭 Navigation & Shortcuts
 - **Shortcut Hub**: Dynamic, user-configurable shortcuts with auto-loading favicons.
 - **Animated Loaders**: Smooth pulse-loading states for remote data fetching.
-- **Floating Links**: Quick access to Emojis and Minigames.
+- **Floating Links**: Quick access to Emojis and the built-in Minigame.
+
+### 🎮 Antipala Pro (Built-in Minigame)
+A high-stakes arcade survival runner integrated directly into the dashboard.
+- **Custom Character**: Play as a hand in a grabbing position dodging shovels.
+- **Multiple Modes**: Choose between **Classic** (original experience) and **Insane** (enhanced challenge with horizontal movement).
+- **Combat System**: In Insane Mode, use the **Spacebar** to charge and shoot rocks to destroy destructible obstacles.
+- **Invincible Cops**: Face cops that block your projectiles and must be jumped over.
+- **Weekly Leaderboard**: Compete for the best score of the week—high scores automatically reset every Friday at 23:59.
+- **Controls**: Jump using Spacebar (Classic), 'W' key, or Arrow Up. Move with A/D (Insane).
 
 ---
 

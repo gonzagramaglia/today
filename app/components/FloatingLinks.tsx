@@ -40,8 +40,8 @@ export default function FloatingLinks({ lang }: FloatingLinksProps) {
 
   const playUrl =
     lang === "en"
-      ? "https://minigame.hoy.today/en"
-      : "https://minigame.hoy.today";
+      ? "/en/minigame"
+      : "/minigame";
 
   const exportPath = lang === "en" ? "/export" : "/exportar";
   const importPath = lang === "en" ? "/import" : "/importar";
@@ -56,11 +56,13 @@ export default function FloatingLinks({ lang }: FloatingLinksProps) {
     }
   };
 
+  const isMinigame = pathname.includes('/minigame');
+
   return (
     <>
       {/* Right Side Buttons: Config / Github */}
       <div className="fixed bottom-8 right-8 flex gap-3 z-[70]">
-        {isSettingsOpen ? (
+        {(isSettingsOpen || isMinigame) ? (
           <a
             href="https://github.com/gonzagramaglia/today"
             className="p-3 bg-white border border-zinc-200 rounded-full shadow-lg hover:shadow-xl transition-all hover:scale-110 group"
@@ -93,14 +95,26 @@ export default function FloatingLinks({ lang }: FloatingLinksProps) {
 
       {/* Left Side Buttons: Home + Emojis + Music + Tasks */}
       <div className="fixed bottom-8 left-8 flex gap-3 z-50 transition-opacity duration-300">
-        <button
-          disabled
-          className="p-3 bg-white border border-zinc-200 rounded-full shadow-lg transition-all opacity-50 cursor-not-allowed group"
-          aria-label={t.goToHome}
-          title={t.goToHome}
-        >
-          <ClipboardClock className="w-6 h-6 text-zinc-900 transition-colors" />
-        </button>
+        {isMinigame ? (
+          <a
+            href={lang === "en" ? "/en" : "/"}
+            className="p-3 bg-white border border-zinc-200 rounded-full shadow-lg hover:shadow-xl transition-all hover:scale-110 group cursor-pointer"
+            aria-label={t.goToHome}
+            title={t.goToHome}
+          >
+            <ClipboardClock className="w-6 h-6 text-gray-900 group-hover:text-yellow-500 transition-colors" />
+          </a>
+        ) : (
+          <button
+            disabled
+            className="p-3 bg-white border border-zinc-200 rounded-full shadow-lg transition-all opacity-50 cursor-not-allowed group"
+            aria-label={t.goToHome}
+            title={t.goToHome}
+          >
+            <ClipboardClock className="w-6 h-6 text-zinc-900 transition-colors" />
+          </button>
+        )}
+        
         <a
           href={emojisUrl}
           rel="noopener noreferrer"
@@ -111,15 +125,26 @@ export default function FloatingLinks({ lang }: FloatingLinksProps) {
           <Smile className="w-6 h-6 text-gray-900 group-hover:text-yellow-500 transition-colors" />
         </a>
 
-        <a
-          href={playUrl}
-          rel="noopener noreferrer"
-          className="p-3 bg-white border border-zinc-200 rounded-full shadow-lg hover:shadow-xl transition-all hover:scale-110 group cursor-pointer"
-          aria-label={t.goToPlay}
-          title={t.goToPlay}
-        >
-          <Joystick className="w-6 h-6 text-gray-900 group-hover:text-yellow-500 transition-colors" />
-        </a>
+        {isMinigame ? (
+          <button
+            disabled
+            className="p-3 bg-white border border-zinc-200 rounded-full shadow-lg transition-all opacity-50 cursor-not-allowed group"
+            aria-label={t.goToPlay}
+            title={t.goToPlay}
+          >
+            <Joystick className="w-6 h-6 text-zinc-900 transition-colors" />
+          </button>
+        ) : (
+          <a
+            href={playUrl}
+            rel="noopener noreferrer"
+            className="p-3 bg-white border border-zinc-200 rounded-full shadow-lg hover:shadow-xl transition-all hover:scale-110 group cursor-pointer"
+            aria-label={t.goToPlay}
+            title={t.goToPlay}
+          >
+            <Joystick className="w-6 h-6 text-gray-900 group-hover:text-yellow-500 transition-colors" />
+          </a>
+        )}
       </div>
     </>
   );
