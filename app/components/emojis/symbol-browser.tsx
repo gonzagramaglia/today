@@ -5,8 +5,7 @@
 import { useState, useMemo, useEffect, useRef } from "react";
 import { symbols } from "../../data/symbols";
 import { useLanguage } from "../../contexts/language-context";
-import { Check, SearchX, X, Hash, Pencil, ExternalLink } from "lucide-react";
-import { useCustomSymbols } from "../../contexts/custom-symbols-context";
+import { Check, SearchX, X, Hash, ExternalLink } from "lucide-react";
 
 export function LanguageSwitch() {
     const { language, setLanguage } = useLanguage();
@@ -35,32 +34,8 @@ export function LanguageSwitch() {
     );
 }
 
-interface SymbolBrowserProps {
-    onEdit?: (symbol: any) => void;
-}
-
-export function SymbolBrowser({ onEdit }: SymbolBrowserProps) {
+export function SymbolBrowser() {
     const { t } = useLanguage();
-    const { customSymbols } = useCustomSymbols();
-
-    // Combined symbols with deduplication (Custom overrides Static)
-    const allSymbols = useMemo(() => {
-        const customIds = new Set(customSymbols.map(s => String(s.id)).filter(Boolean));
-        const customSymbolsSet = new Set(customSymbols.map(s => s.symbol));
-        const merged = [...customSymbols];
-
-        symbols.forEach(s => {
-            // Exclude if ID matches (edited static) OR Symbol matches (overwrite by string)
-            const hasIdMatch = s.id && customIds.has(String(s.id));
-            const hasSymbolMatch = customSymbolsSet.has(s.symbol);
-
-            if (!hasIdMatch && !hasSymbolMatch) {
-                merged.push(s);
-            }
-        });
-
-        return merged;
-    }, [customSymbols]);
 
     // State for Search
     const [search, setSearch] = useState("");
@@ -146,11 +121,11 @@ export function SymbolBrowser({ onEdit }: SymbolBrowserProps) {
         }
 
         if (!search.trim()) return currentSymbols;
-        if (!search.trim() && !activeTag) return allSymbols;
+        if (!search.trim() && !activeTag) return currentSymbols;
 
         const normalizedSearch = normalizeText(search);
 
-        return allSymbols.filter((item) => {
+        return currentSymbols.filter((item) => {
             // Filter by Active Tag
             if (activeTag) {
                 const itemTags = item.tags?.[language] || [];
@@ -177,7 +152,7 @@ export function SymbolBrowser({ onEdit }: SymbolBrowserProps) {
 
             return false;
         });
-    }, [search, language, activeTag, t, allSymbols]);
+    }, [search, language, activeTag, t]);
 
     const contextualTags = useMemo(() => {
         if (!search.trim() && !activeTag) return language === "en" ? ["Expressions", "Symbols"] : ["Expresiones", "Símbolos"]; // Default tags
@@ -366,18 +341,6 @@ export function SymbolBrowser({ onEdit }: SymbolBrowserProps) {
                                         item.symbol
                                     )}
                                 </div>
-                                {onEdit && (
-                                    <button
-                                        onClick={(e) => {
-                                            e.stopPropagation();
-                                            onEdit(item);
-                                        }}
-                                        className="absolute right-2 top-1/2 -translate-y-1/2 p-1 bg-white/80 hover:bg-white rounded-full text-neutral-400 hover:text-[#6866D6] opacity-0 group-hover:opacity-100 transition-all shadow-sm z-10 cursor-pointer"
-                                        title={t("config.edit")}
-                                    >
-                                        <Pencil className="w-3 h-3" />
-                                    </button>
-                                )}
                                 <div className="flex flex-col min-w-0">
                                     <span className={`text-sm font-medium truncate transition-colors ${isCopied ? "text-green-600" : "text-neutral-900"}`}>
                                         {isCopied ? t("copy.feedback") : item.description[language].main}

@@ -1123,7 +1123,7 @@ export default function Home({ lang }: HomeProps) {
   // Clock State
 
   return (
-    <section className="mb-8">
+    <section className="-mb-4">
       <div className="mb-5">
         {/* Clock and Date */}
         {/* Header (Notes + Clock + Desktop Add Button) */}
