@@ -1917,7 +1917,7 @@ export default function Home({ lang }: HomeProps) {
               )}
             {/* Note Ordering Arrows - Positioned to the right outside the block */}
             {editingBlockId !== block.id && blocks.length > 1 && (
-              <div className="absolute left-full ml-3 bottom-[-0.24px] flex flex-col gap-2 lg:opacity-0 lg:group-hover/note:opacity-100 transition-opacity z-10">
+              <div className="hidden absolute left-full ml-3 bottom-[-0.24px] flex flex-col gap-2 lg:opacity-0 lg:group-hover/note:opacity-100 transition-opacity z-10">
                 <button
                   onClick={(e) => {
                     e.stopPropagation();
