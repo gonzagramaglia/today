@@ -330,7 +330,7 @@ export default function WeeklyTasks() {
                 </div>
 
                 <div className={`${isCollapsed ? 'hidden' : ''}`}>
-                    <div className={`space-y-2 max-h-[30vh] overflow-y-auto overflow-x-hidden mb-3 custom-scrollbar transition-opacity duration-200 ${isAdding ? 'opacity-50 pointer-events-none' : ''}`}>
+                    <div className={`space-y-2 max-h-[30vh] overflow-x-hidden mb-3 custom-scrollbar transition-opacity duration-200 ${isAdding ? 'opacity-50 pointer-events-none' : ''} ${isVisible ? 'overflow-y-auto' : 'overflow-hidden'}`}>
                     {loading ? (
                         <div className="flex items-center justify-center py-6 opacity-50">
                             <Loader2 className="w-5 h-5 animate-spin text-[#6866D6]" />

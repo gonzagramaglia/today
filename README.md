@@ -37,13 +37,13 @@
 
 | Component | Technology |
 | :--- | :--- |
-| **Framework** | [Next.js 16](https://nextjs.org/) |
-| **State & Flow** | [React 19](https://react.dev/) |
-| **Styling** | [Tailwind CSS 4](https://tailwindcss.com/) |
+| **Framework** | [**Next.js 16**](https://nextjs.org/) |
+| **State & Flow** | [**React 19**](https://react.dev/) |
+| **Styling** | [**Tailwind CSS 4**](https://tailwindcss.com/) |
 | **Database** | Local Storage |
-| **Type Safety** | [TypeScript](https://www.typescriptlang.org/) |
-| **Icons** | [Lucide React](https://lucide.dev/) |
-| **Web Typography** | [Geist Sans/Mono](https://vercel.com/font) |
+| **Type Safety** | [**TypeScript**](https://www.typescriptlang.org/) |
+| **Icons** | [**Lucide React**](https://lucide.dev/) |
+| **Web Typography** | [**Geist Sans/Mono**](https://vercel.com/font) |
 
 ---
 
@@ -57,4 +57,4 @@ Enhance your flow with these productivity tools:
 
 ---
 
-Made with 💛 by [Gonza](https://gonzagramaglia.github.io)
+Made with 💛 by [**Gonza**](https://gonzagramaglia.github.io)
