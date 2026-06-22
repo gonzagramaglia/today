@@ -1308,6 +1308,7 @@ export default function Home({ lang }: HomeProps) {
                       }
                     }}
                     data-input-type="title"
+                    onClick={(e) => e.stopPropagation()}
                     className={`w-full sm:flex-1 text-lg font-semibold px-2 py-1 border-b focus:outline-none focus:border-blue-500/50 rounded-t-md transition-all bg-black/10 border-black/10 text-zinc-900 shadow-sm`}
                     style={{ borderBottomColor: "rgba(0,0,0,0.1)" }}
                     placeholder={t.blockNamePlaceholder}
@@ -1319,7 +1320,10 @@ export default function Home({ lang }: HomeProps) {
                         <span
                           className="w-full sm:flex-1 text-lg font-semibold px-2 py-1 border-b border-transparent text-zinc-900 rounded-t-md transition-all block truncate"
                           style={{ borderBottomColor: "rgba(0,0,0,0.1)" }}
-                          onClick={() => startEditing(block, "title")}
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            startEditing(block, "title");
+                          }}
                         >
                           <span className="text-zinc-400 select-none">{`${lang === "en" ? "Note" : "Nota"} #${block.tag}`}</span>
                         </span>
@@ -1335,6 +1339,7 @@ export default function Home({ lang }: HomeProps) {
                             if (node.tagName === "A") return;
                             node = node.parentElement;
                           }
+                          e.stopPropagation();
                           startEditing(block, "title");
                         }}
                         dangerouslySetInnerHTML={{
