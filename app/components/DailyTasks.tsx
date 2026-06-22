@@ -68,16 +68,28 @@ export default function DailyTasks() {
     }, [isAdding, editingId, inputValue, urlValue])
 
     const [isVisible, setIsVisible] = useState(true)
+    const [isHidden, setIsHidden] = useState(false)
 
     useEffect(() => {
+        let timeoutId: NodeJS.Timeout;
         const checkVisibility = () => {
             const saved = localStorage.getItem('config-show-tasks')
-            setIsVisible(saved !== 'false')
+            const visible = saved !== 'false'
+            setIsVisible(visible)
+            if (visible) {
+                clearTimeout(timeoutId)
+                setIsHidden(false)
+            } else {
+                timeoutId = setTimeout(() => setIsHidden(true), 500)
+            }
         }
 
         checkVisibility()
         window.addEventListener('config-update', checkVisibility)
-        return () => window.removeEventListener('config-update', checkVisibility)
+        return () => {
+            window.removeEventListener('config-update', checkVisibility)
+            clearTimeout(timeoutId)
+        }
     }, [])
 
     // Fetch integration: Local + Supabase
@@ -271,7 +283,7 @@ export default function DailyTasks() {
     if (!mounted) return null
 
     return (
-        <div ref={containerRef} className={`transition-opacity duration-500 ${isVisible ? 'opacity-100' : 'opacity-0 pointer-events-none select-none'}`}>
+        <div ref={containerRef} className={`transition-opacity duration-500 ${isVisible ? 'opacity-100' : 'opacity-0 pointer-events-none select-none'} ${isHidden ? 'hidden' : ''}`}>
             <div className="bg-white border border-zinc-200 rounded-lg shadow-lg p-4 transition-all">
                 <div className="group/header flex items-center justify-between mb-5" onClick={() => editingId && cancelEditing()}>
                     <h3

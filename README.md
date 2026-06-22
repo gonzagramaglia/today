@@ -21,7 +21,7 @@
 
 ### ✅ Focus-Driven Tasks
 - **Focus Mode**: Active task creation fades out distractions to keep you in the zone.
-- **Auto Reset**: Progress is automatically reset at midnight (Argentina Time 🇦🇷).
+- **Daily Reset**: Daily tasks are automatically unchecked every midnight (Argentina Time 🇦🇷) to start fresh.
 - **Safe Management**: Multi-step confirmation for deletions to prevent data loss.
 
 
@@ -29,7 +29,7 @@
 ### 🧭 Navigation & Shortcuts
 - **Shortcut Hub**: Dynamic, user-configurable shortcuts with auto-loading favicons.
 - **Animated Loaders**: Smooth pulse-loading states for remote data fetching.
-- **Floating Links**: Quick access to Emojis, Playlists, and Minigames.
+- **Floating Links**: Quick access to Emojis and Minigames.
 
 ---
 
@@ -47,32 +47,7 @@
 
 ---
 
-## 🚀 Getting Started
 
-### Prerequisites
-- Node.js 22+
-- Yarn
-
-### Setup
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/gonzagramaglia/today.git
-   cd today
-   ```
-
-2. **Install dependencies**
-   ```bash
-   yarn install
-   ```
-
-3. **Run development server**
-   ```bash
-   yarn dev
-   ```
-
-Open [http://localhost:3000](http://localhost:3000) to see the dashboard.
-
----
 
 ## 📦 Extensions (Recommended)
 Enhance your flow with these productivity tools:
@@ -82,4 +57,4 @@ Enhance your flow with these productivity tools:
 
 ---
 
-Made with 💛 by [Gonza](https://github.com/gonzagramaglia)
+Made with 💛 by [Gonza](https://gonzagramaglia.github.io)
