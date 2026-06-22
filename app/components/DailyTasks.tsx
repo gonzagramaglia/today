@@ -283,7 +283,7 @@ export default function DailyTasks() {
     if (!mounted) return null
 
     return (
-        <div ref={containerRef} className={`transition-opacity duration-500 ${isVisible ? 'opacity-100' : 'opacity-0 pointer-events-none select-none'} ${isHidden ? 'hidden' : ''}`}>
+        <div ref={containerRef} className={`transition-opacity duration-500 ${isVisible ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none select-none'} ${isHidden ? 'hidden' : ''}`}>
             <div className="bg-white border border-zinc-200 rounded-lg shadow-lg p-4 transition-all">
                 <div className="group/header flex items-center justify-between mb-5" onClick={() => editingId && cancelEditing()}>
                     <h3

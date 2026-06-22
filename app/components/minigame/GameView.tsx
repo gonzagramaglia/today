@@ -15,7 +15,7 @@ export function GameView() {
                     <img
                         src="/gamer.png"
                         alt="Gamer"
-                        className="h-52 md:h-60 w-auto object-contain mt-0 md:mt-0 md:mb-0"
+                        className="h-52 md:h-60 w-auto aspect-square object-contain mt-0 md:mt-0 md:mb-0"
                     />
                 </a>
                 <div className="flex flex-col items-center md:items-start md:gap-0 -mt-4 md:mt-0 md:-ml-4">

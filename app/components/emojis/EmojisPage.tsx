@@ -16,8 +16,6 @@ function EmojisContent() {
     const { language, t } = useLanguage();
     const [isSettingsOpen, setIsSettingsOpen] = useState(false);
     const [editingEmoji, setEditingEmoji] = useState(null);
-    const searchParams = useSearchParams();
-    const modal = searchParams.get('modal');
 
     const handleEditEmoji = (emoji: any) => {
         setEditingEmoji(emoji);
@@ -35,7 +33,7 @@ function EmojisContent() {
     const importPath = `${basePath}?modal=import`;
 
     return (
-        <div className="max-w-4xl mx-4 mt-2 lg:mx-auto">
+        <div className="max-w-4xl lg:max-w-[860px] mx-4 mt-2 lg:mx-auto">
             <main className="flex-auto min-w-0 mt-2 flex flex-col px-8 lg:px-0 relative z-10">
                 <SymbolBrowser onEdit={handleEditEmoji} />
                 <div className="mt-12">
@@ -57,10 +55,22 @@ function EmojisContent() {
                 />
             )}
 
-            {/* Modales de Import/Export por query param */}
+            <Suspense fallback={null}>
+                <QueryModals />
+            </Suspense>
+        </div>
+    );
+}
+
+function QueryModals() {
+    const searchParams = useSearchParams();
+    const modal = searchParams.get('modal');
+    
+    return (
+        <>
             {modal === 'export' && <ExportModal />}
             {modal === 'import' && <ImportModal />}
-        </div>
+        </>
     );
 }
 
@@ -73,13 +83,7 @@ function EmojisPageInner({ lang }: { lang: "es" | "en" }) {
 
     return (
         <CustomSymbolsProvider>
-            <Suspense fallback={
-                <div className="flex flex-col items-center justify-center pt-32 pb-20 opacity-50">
-                    <Loader2 className="w-12 h-12 animate-spin text-[#6866D6]" />
-                </div>
-            }>
-                <EmojisContent />
-            </Suspense>
+            <EmojisContent />
         </CustomSymbolsProvider>
     );
 }

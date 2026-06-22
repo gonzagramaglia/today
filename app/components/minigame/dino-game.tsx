@@ -553,7 +553,7 @@ export const DinoGame: React.FC = () => {
     }, [gameStarted, gameOver, highScore, t, isMobile, gameMode]);
 
     return (
-        <div className="flex flex-col items-center w-full max-w-4xl mx-auto bg-white/50 backdrop-blur-sm p-4 md:p-8 rounded-3xl border border-white/20 shadow-xl px-3 md:px-8">
+        <div className="flex flex-col items-center w-full max-w-[860px] mx-auto bg-white/50 backdrop-blur-sm p-4 md:p-8 rounded-3xl border border-white/20 shadow-xl px-3 md:px-8">
             <div className="w-full flex justify-between items-center mb-4 px-2">
                 <div className="flex flex-col">
                     <span className="text-xs uppercase tracking-wider text-neutral-500 font-bold">{t('gameScore')}</span>

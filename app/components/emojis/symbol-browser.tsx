@@ -223,7 +223,7 @@ export function SymbolBrowser({ onEdit }: SymbolBrowserProps) {
                     <img
                         src="/milemojis.png"
                         alt="Emojis"
-                        className={`h-64 md:h-80 w-auto object-contain hover:scale-105 transition-transform duration-500 drop-shadow-2xl -mt-10 -mb-8 md:-mt-14 md:-mb-12 md:-mr-7`}
+                        className={`h-64 md:h-80 w-auto aspect-square object-contain hover:scale-105 transition-transform duration-500 drop-shadow-2xl -mt-10 -mb-8 md:-mt-14 md:-mb-12 md:-mr-7`}
                     />
                 </button>
                 <div className="flex flex-col items-center md:items-start md:gap-0 md:-ml-7">
@@ -350,7 +350,7 @@ export function SymbolBrowser({ onEdit }: SymbolBrowserProps) {
             </div>
 
             <section>
-                <div className={`grid ${activeTag && (activeTag === 'Expressions' || activeTag === 'Expresiones') ? 'grid-cols-1' : 'grid-cols-2'} sm:grid-cols-3 md:grid-cols-4 gap-4`}>
+                <div className={`grid gap-4 ${activeTag && (activeTag === 'Expressions' || activeTag === 'Expresiones') ? 'grid-cols-1 sm:grid-cols-1 md:grid-cols-1' : 'grid-cols-2 sm:grid-cols-3 md:grid-cols-4'}`}>
                     {filteredSymbols.map((item, index) => {
                         const isCopied = copiedSymbol === item.symbol;
                         return (
