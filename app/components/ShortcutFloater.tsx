@@ -338,16 +338,16 @@ export default function ShortcutFloater() {
                     {side === 'left' && (
                         <button
                             onClick={() => handleOpenModal(side)}
-                            className="flex items-center justify-center w-10 h-10 rounded-full bg-white border border-zinc-200 shadow-sm opacity-50 hover:opacity-100 transition-all duration-300 hover:scale-110 hover:shadow-md cursor-pointer"
+                            className="flex items-center justify-center p-3 rounded-full bg-white border border-zinc-200 shadow-lg opacity-50 hover:opacity-100 transition-all duration-300 hover:scale-110 hover:shadow-xl cursor-pointer"
                             title={t.addTooltip}
                         >
-                            <Plus size={16} className="text-zinc-600" />
+                            <Plus className="w-6 h-6 text-zinc-600" />
                         </button>
                     )}
 
                     {loadingShortcuts && side === 'left' ? (
-                        <div className="w-10 h-10 rounded-full bg-white border border-zinc-200 shadow-sm flex items-center justify-center animate-pulse">
-                             <div className="w-4 h-4 border-2 border-zinc-200 border-t-zinc-500 rounded-full animate-spin" />
+                        <div className="p-3 rounded-full bg-white border border-zinc-200 shadow-lg flex items-center justify-center animate-pulse">
+                             <div className="w-6 h-6 border-2 border-zinc-200 border-t-zinc-500 rounded-full animate-spin" />
                         </div>
                     ) : (
                         side === 'left' ? (
@@ -358,12 +358,12 @@ export default function ShortcutFloater() {
                                         onDragStart={() => handleDragStart(shortcut.id)}
                                         onDragOver={handleDragOver}
                                         onDrop={() => handleDrop(shortcut.id)}
-                                        className={`group relative flex items-center justify-center w-10 h-10 rounded-full bg-white border border-zinc-200 shadow-sm hover:shadow-md transition-all duration-300 hover:scale-110 cursor-pointer overflow-visible ${draggedShortcutId === shortcut.id ? 'opacity-50 grayscale' : ''}`}
+                                        className={`group relative flex items-center justify-center p-3 rounded-full bg-white border border-zinc-200 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 cursor-pointer overflow-visible ${draggedShortcutId === shortcut.id ? 'opacity-50 grayscale' : ''}`}
                                     >
                                         <a
                                             href={shortcut.url}
                                             onClick={(e) => handleShortcutClick(e, shortcut)}
-                                            className="w-full h-full p-1 flex items-center justify-center rounded-full cursor-pointer"
+                                            className="w-6 h-6 flex items-center justify-center rounded-full cursor-pointer"
                                             role="button"
                                             tabIndex={0}
                                             draggable="false"
@@ -403,12 +403,12 @@ export default function ShortcutFloater() {
                                         onDragStart={() => handleDragStart(shortcut.id)}
                                         onDragOver={handleDragOver}
                                         onDrop={() => handleDrop(shortcut.id)}
-                                        className={`group relative flex items-center justify-center w-10 h-10 rounded-full bg-white border border-zinc-200 shadow-sm hover:shadow-md transition-all duration-300 hover:scale-110 cursor-pointer overflow-visible ${draggedShortcutId === shortcut.id ? 'opacity-50 grayscale' : ''}`}
+                                        className={`group relative flex items-center justify-center p-3 rounded-full bg-white border border-zinc-200 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 cursor-pointer overflow-visible ${draggedShortcutId === shortcut.id ? 'opacity-50 grayscale' : ''}`}
                                     >
                                         <a
                                             href={shortcut.url}
                                             onClick={(e) => handleShortcutClick(e, shortcut)}
-                                            className="w-full h-full p-1 flex items-center justify-center rounded-full cursor-pointer"
+                                            className="w-6 h-6 flex items-center justify-center rounded-full cursor-pointer"
                                             role="button"
                                             tabIndex={0}
                                             draggable="false"
@@ -439,7 +439,7 @@ export default function ShortcutFloater() {
                                     </div>
                                 ))}
                                 <div
-                                    className="group relative flex items-center justify-center w-10 h-10 rounded-full bg-white border border-zinc-200 shadow-sm hover:shadow-md transition-all duration-300 hover:scale-110 cursor-pointer overflow-visible"
+                                    className="group relative flex items-center justify-center p-3 rounded-full bg-white border border-zinc-200 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 cursor-pointer overflow-visible"
                                 >
                                     <a
                                         href="https://chromewebstore.google.com/detail/just-focus/gefaddaengbodpiobpbgblajdboalmgc"
@@ -447,7 +447,7 @@ export default function ShortcutFloater() {
                                             e.preventDefault()
                                             window.open("https://chromewebstore.google.com/detail/just-focus/gefaddaengbodpiobpbgblajdboalmgc", '_blank')
                                         }}
-                                        className="w-full h-full p-1 flex items-center justify-center rounded-full cursor-pointer"
+                                        className="w-6 h-6 flex items-center justify-center rounded-full cursor-pointer"
                                         role="button"
                                         tabIndex={0}
                                         draggable="true"

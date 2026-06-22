@@ -111,7 +111,6 @@ export default function FloatingLinks({ lang }: FloatingLinksProps) {
           <Smile className="w-6 h-6 text-gray-900 group-hover:text-yellow-500 transition-colors" />
         </a>
 
-        {/* 
         <a
           href={playUrl}
           rel="noopener noreferrer"
@@ -121,7 +120,6 @@ export default function FloatingLinks({ lang }: FloatingLinksProps) {
         >
           <Joystick className="w-6 h-6 text-gray-900 group-hover:text-yellow-500 transition-colors" />
         </a>
-        */}
       </div>
     </>
   );
