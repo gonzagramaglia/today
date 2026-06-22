@@ -139,7 +139,7 @@ export default function Countdown() {
         return () => document.removeEventListener('mousedown', handleClickOutside)
     }, [isCreating, editingId, formData])
 
-    const [isVisible, setIsVisible] = useState(true)
+    const [isVisible, setIsVisible] = useState(false)
 
     useEffect(() => {
         const checkVisibility = () => {

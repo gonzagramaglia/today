@@ -67,8 +67,8 @@ export default function MonthlyTasks() {
         }
     }, [isAdding, editingId, inputValue, urlValue])
 
-    const [isVisible, setIsVisible] = useState(true)
-    const [isHidden, setIsHidden] = useState(false)
+    const [isVisible, setIsVisible] = useState(false)
+    const [isHidden, setIsHidden] = useState(true)
 
     useEffect(() => {
         let timeoutId: NodeJS.Timeout;

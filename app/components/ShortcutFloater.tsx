@@ -23,7 +23,7 @@ export default function ShortcutFloater() {
     const [isModalOpen, setIsModalOpen] = useState(false)
     const [editingId, setEditingId] = useState<string | null>(null)
     const [activeSide, setActiveSide] = useState<Position>('right')
-    const [areShortcutsVisible, setAreShortcutsVisible] = useState(true)
+    const [areShortcutsVisible, setAreShortcutsVisible] = useState(false)
     const [loadingShortcuts, setLoadingShortcuts] = useState(true)
     const [draggedShortcutId, setDraggedShortcutId] = useState<string | null>(null)
 
