@@ -63,6 +63,7 @@
 
 html {
   min-width: 360px;
+  overflow-y: scroll;
 }
 
 .prose .anchor {

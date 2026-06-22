@@ -66,7 +66,7 @@ export default function Header({ lang, onAddNote, addNoteText, title, mobileAddT
                 <img
                     src="/notes.png"
                     alt="Notes"
-                    className="w-64 lg:w-72 h-auto object-contain select-none cursor-pointer"
+                    className="w-64 lg:w-72 aspect-square h-auto object-contain select-none cursor-pointer"
                 />
             </a>
 
