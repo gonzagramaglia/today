@@ -51,7 +51,8 @@ export default function Header({ lang, onAddNote, addNoteText, title, mobileAddT
         })
     }
 
-    if (!currentTime) return null
+    const timeDisplay = currentTime ? formatTime(currentTime) : "00:00:00"
+    const dateDisplay = currentTime ? formatDate(currentTime) : "..."
 
     return (
         <div className={`flex flex-col ${showClock ? 'lg:flex-row lg:mb-6 lg:gap-0' : 'lg:mb-20'} items-center justify-center gap-8 -mt-20 lg:-mt-24 lg:-ml-12 -mb-4`}>
@@ -82,11 +83,11 @@ export default function Header({ lang, onAddNote, addNoteText, title, mobileAddT
                         title="Abrir calendario/reloj en anycalendar.org"
                         style={{ textDecoration: 'none' }}
                     >
-                        <span className="text-6xl font-black font-mono tracking-tighter text-zinc-900 leading-none cursor-pointer select-none group-hover:text-[#6866D6] transition-colors">
-                            {formatTime(currentTime)}
+                        <span className={`text-6xl font-black font-mono tracking-tighter text-zinc-900 leading-none cursor-pointer select-none group-hover:text-[#6866D6] transition-colors ${!currentTime ? 'opacity-0' : ''}`}>
+                            {timeDisplay}
                         </span>
-                        <span className="text-lg text-zinc-500 font-medium capitalize cursor-pointer select-none group-hover:text-[#6866D6] transition-colors">
-                            {formatDate(currentTime)}
+                        <span className={`text-lg text-zinc-500 font-medium capitalize cursor-pointer select-none group-hover:text-[#6866D6] transition-colors ${!currentTime ? 'opacity-0' : ''}`}>
+                            {dateDisplay}
                         </span>
                     </a>
 

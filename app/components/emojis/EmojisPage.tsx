@@ -2,7 +2,7 @@
 
 import { useLanguage, LanguageProvider } from "../../contexts/language-context";
 import { useState, useEffect, Suspense } from "react";
-import { Zap } from "lucide-react";
+import { Loader2 } from "lucide-react";
 import ConfigModal from "./config-modal";
 import { CustomSymbolsProvider } from "../../contexts/custom-symbols-context";
 import ExportModal from "./export-modal";
@@ -73,7 +73,11 @@ function EmojisPageInner({ lang }: { lang: "es" | "en" }) {
 
     return (
         <CustomSymbolsProvider>
-            <Suspense fallback={<div>Loading...</div>}>
+            <Suspense fallback={
+                <div className="flex flex-col items-center justify-center pt-32 pb-20 opacity-50">
+                    <Loader2 className="w-12 h-12 animate-spin text-[#6866D6]" />
+                </div>
+            }>
                 <EmojisContent />
             </Suspense>
         </CustomSymbolsProvider>
