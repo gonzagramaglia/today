@@ -6,7 +6,7 @@ export function GameView() {
     const { language } = useLanguage();
 
     return (
-        <div className="space-y-4 md:space-y-8 relative">
+        <div className="space-y-2 relative">
             <div className="flex flex-col md:flex-row items-center justify-center pt-3 md:pt-8 pb-0 gap-0 md:gap-4 max-w-4xl mx-auto md:pl-8">
                 <a 
                     href="https://v0.app/"

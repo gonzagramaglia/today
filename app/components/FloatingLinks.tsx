@@ -36,7 +36,7 @@ export default function FloatingLinks({ lang }: FloatingLinksProps) {
 
   // Actualizar URLs de los botones
   const emojisUrl =
-    lang === "en" ? "https://emojis.hoy.today/en" : "https://emojis.hoy.today";
+    lang === "en" ? "/en/emojis" : "/emojis";
 
   const playUrl =
     lang === "en"
@@ -57,12 +57,13 @@ export default function FloatingLinks({ lang }: FloatingLinksProps) {
   };
 
   const isMinigame = pathname.includes('/minigame');
+  const isEmojis = pathname.includes('/emojis');
 
   return (
     <>
       {/* Right Side Buttons: Config / Github */}
       <div className="fixed bottom-8 right-8 flex gap-3 z-[70]">
-        {(isSettingsOpen || isMinigame) ? (
+        {(isSettingsOpen || isMinigame || isEmojis) ? (
           <a
             href="https://github.com/gonzagramaglia/today"
             className="p-3 bg-white border border-zinc-200 rounded-full shadow-lg hover:shadow-xl transition-all hover:scale-110 group"
@@ -95,7 +96,7 @@ export default function FloatingLinks({ lang }: FloatingLinksProps) {
 
       {/* Left Side Buttons: Home + Emojis + Music + Tasks */}
       <div className="fixed bottom-8 left-8 flex gap-3 z-50 transition-opacity duration-300">
-        {isMinigame ? (
+        {(isMinigame || isEmojis) ? (
           <a
             href={lang === "en" ? "/en" : "/"}
             className="p-3 bg-white border border-zinc-200 rounded-full shadow-lg hover:shadow-xl transition-all hover:scale-110 group cursor-pointer"
@@ -115,15 +116,26 @@ export default function FloatingLinks({ lang }: FloatingLinksProps) {
           </button>
         )}
         
-        <a
-          href={emojisUrl}
-          rel="noopener noreferrer"
-          className="p-3 bg-white border border-zinc-200 rounded-full shadow-lg hover:shadow-xl transition-all hover:scale-110 group"
-          aria-label={t.goToEmojis}
-          title={t.goToEmojis}
-        >
-          <Smile className="w-6 h-6 text-gray-900 group-hover:text-yellow-500 transition-colors" />
-        </a>
+        {isEmojis ? (
+          <button
+            disabled
+            className="p-3 bg-white border border-zinc-200 rounded-full shadow-lg transition-all opacity-50 cursor-not-allowed group"
+            aria-label={t.goToEmojis}
+            title={t.goToEmojis}
+          >
+            <Smile className="w-6 h-6 text-zinc-900 transition-colors" />
+          </button>
+        ) : (
+          <a
+            href={emojisUrl}
+            rel="noopener noreferrer"
+            className="p-3 bg-white border border-zinc-200 rounded-full shadow-lg hover:shadow-xl transition-all hover:scale-110 group cursor-pointer"
+            aria-label={t.goToEmojis}
+            title={t.goToEmojis}
+          >
+            <Smile className="w-6 h-6 text-gray-900 group-hover:text-yellow-500 transition-colors" />
+          </a>
+        )}
 
         {isMinigame ? (
           <button

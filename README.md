@@ -29,7 +29,18 @@
 ### 🧭 Navigation & Shortcuts
 - **Shortcut Hub**: Dynamic, user-configurable shortcuts with auto-loading favicons.
 - **Animated Loaders**: Smooth pulse-loading states for remote data fetching.
-- **Floating Links**: Quick access to Emojis and the built-in Minigame.
+- **Floating Links**: Quick access to Home, Emojis and Minigame.
+
+### 😎 Emojis (Built-in Symbol Collection)
+A fast, accessible, and global collection of emojis and symbols for quick copy and pasting.
+- **✨ Custom Emojis**: Add, edit, and manage your own custom emojis and tags locally.
+- **🌐 Internationalization**: Seamless toggle between Spanish 🇪🇸 and English 🇺🇸.
+- **🔎 Smart Search**: Find emojis by Name (e.g., "Rocket"), Category (e.g., "Symbols"), or Semantic tags (e.g., #Math, #Office).
+- **📋 Instant Copy**: One-click copy with immediate visual feedback.
+- **📂 Organized Library**: Structured categories for Emojis, Expressions, Letters, and Symbols.
+- **💾 Local Data**: Your custom creations and edits are saved locally in your browser.
+- **🔄 Backups**: Export your data to a JSON file or Import a previous backup from the configuration modal.
+
 
 ### 🎮 Antipala Pro (Built-in Minigame)
 A high-stakes arcade survival runner integrated directly into the dashboard.
