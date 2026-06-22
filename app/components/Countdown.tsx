@@ -162,12 +162,18 @@ export default function Countdown() {
                     .order('sort_index', { ascending: true });
                 
                 if (!error && data && data.length > 0) {
-                    setCountdowns(data.map((c: any) => ({
+                    const parsedData = data.map((c: any) => ({
                         id: c.local_id,
                         name: c.name,
                         date: c.date,
                         type: c.type
-                    })));
+                    })).filter((c: any) => c.type !== 'christmas');
+                    setCountdowns(parsedData);
+                    
+                    const hasChristmas = data.some((c: any) => c.type === 'christmas');
+                    if (hasChristmas) {
+                        supabase.from('countdowns').delete().eq('user_id', user.id).eq('type', 'christmas').then();
+                    }
                 } else {
                     setCountdowns([]);
                 }
@@ -175,7 +181,9 @@ export default function Countdown() {
                 const saved = localStorage.getItem('countdown-events')
                 if (saved) {
                     try {
-                        setCountdowns(JSON.parse(saved))
+                        const parsed = JSON.parse(saved).filter((c: any) => c.type !== 'christmas');
+                        setCountdowns(parsed);
+                        localStorage.setItem('countdown-events', JSON.stringify(parsed));
                     } catch (e) {
                         console.error('Failed to parse countdowns', e)
                     }
@@ -186,12 +194,6 @@ export default function Countdown() {
                         const nextYear = currentYear + 1
                         const t = dictionary[isEnglish ? 'en' : 'es']
                         const initialCountdown = [
-                            {
-                                id: crypto.randomUUID(),
-                                name: `${t.countdownChristmas} ${currentYear}`,
-                                date: `${currentYear}-12-24T23:59`,
-                                type: 'christmas' as const
-                            },
                             {
                                 id: crypto.randomUUID(),
                                 name: `${t.countdownNewYear} ${nextYear}`,

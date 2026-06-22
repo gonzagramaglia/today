@@ -37,10 +37,7 @@ export default function FloatingLinks({ lang }: FloatingLinksProps) {
   // Actualizar URLs de los botones
   const emojisUrl =
     lang === "en" ? "https://emojis.hoy.today/en" : "https://emojis.hoy.today";
-  const musicUrl =
-    lang === "en"
-      ? "https://playlist.hoy.today/en"
-      : "https://playlist.hoy.today";
+
   const playUrl =
     lang === "en"
       ? "https://minigame.hoy.today/en"
@@ -113,15 +110,7 @@ export default function FloatingLinks({ lang }: FloatingLinksProps) {
         >
           <Smile className="w-6 h-6 text-gray-900 group-hover:text-yellow-500 transition-colors" />
         </a>
-        <a
-          href={musicUrl}
-          rel="noopener noreferrer"
-          className="p-3 bg-white border border-zinc-200 rounded-full shadow-lg hover:shadow-xl transition-all hover:scale-110 group cursor-pointer"
-          aria-label={t.goToMusic}
-          title={t.goToMusic}
-        >
-          <Disc3 className="w-6 h-6 text-zinc-900 group-hover:text-yellow-500 transition-colors animate-spin-slow" />
-        </a>
+
         <a
           href={playUrl}
           rel="noopener noreferrer"
