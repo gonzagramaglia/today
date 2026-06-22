@@ -333,21 +333,21 @@ export default function ShortcutFloater() {
             {sides.map((side) => (
                 <div
                     key={side}
-                    className={`fixed top-6 ${side === 'left' ? 'left-9' : 'right-7 hidden sm:flex'} flex items-center gap-[9px] z-50 transition-opacity duration-300 ${areShortcutsVisible ? 'opacity-100' : 'opacity-0 pointer-events-none select-none'} [&:hover>*:not(:hover)]:scale-75 [&:hover>*:not(:hover)]:grayscale [&:hover>*:not(:hover)]:opacity-70`}
+                    className={`fixed top-7 ${side === 'left' ? 'left-8' : 'right-8 hidden sm:flex'} flex items-center gap-2 z-50 transition-opacity duration-300 ${areShortcutsVisible ? 'opacity-100' : 'opacity-0 pointer-events-none select-none'} [&:hover>*:not(:hover)]:scale-75 [&:hover>*:not(:hover)]:grayscale [&:hover>*:not(:hover)]:opacity-70`}
                 >
                     {side === 'left' && (
                         <button
                             onClick={() => handleOpenModal(side)}
-                            className="flex items-center justify-center p-[13px] rounded-full bg-white border border-zinc-200 shadow-lg opacity-50 hover:opacity-100 transition-all duration-300 hover:scale-110 hover:shadow-xl cursor-pointer"
+                            className="flex items-center justify-center p-3 rounded-full bg-white border border-zinc-200 shadow-lg opacity-50 hover:opacity-100 transition-all duration-300 hover:scale-110 hover:shadow-xl cursor-pointer"
                             title={t.addTooltip}
                         >
-                            <Plus className="w-[27px] h-[27px] text-zinc-600" />
+                            <Plus className="w-6 h-6 text-zinc-600" />
                         </button>
                     )}
 
                     {loadingShortcuts && side === 'left' ? (
-                        <div className="p-[13px] rounded-full bg-white border border-zinc-200 shadow-lg flex items-center justify-center animate-pulse">
-                             <div className="w-[27px] h-[27px] border-2 border-zinc-200 border-t-zinc-500 rounded-full animate-spin" />
+                        <div className="p-3 rounded-full bg-white border border-zinc-200 shadow-lg flex items-center justify-center animate-pulse">
+                             <div className="w-6 h-6 border-2 border-zinc-200 border-t-zinc-500 rounded-full animate-spin" />
                         </div>
                     ) : (
                         side === 'left' ? (
@@ -358,12 +358,12 @@ export default function ShortcutFloater() {
                                         onDragStart={() => handleDragStart(shortcut.id)}
                                         onDragOver={handleDragOver}
                                         onDrop={() => handleDrop(shortcut.id)}
-                                        className={`group relative flex items-center justify-center p-[13px] rounded-full bg-white border border-zinc-200 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 cursor-pointer overflow-visible ${draggedShortcutId === shortcut.id ? 'opacity-50 grayscale' : ''}`}
+                                        className={`group relative flex items-center justify-center p-3 rounded-full bg-white border border-zinc-200 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 cursor-pointer overflow-visible ${draggedShortcutId === shortcut.id ? 'opacity-50 grayscale' : ''}`}
                                     >
                                         <a
                                             href={shortcut.url}
                                             onClick={(e) => handleShortcutClick(e, shortcut)}
-                                            className="w-[27px] h-[27px] flex items-center justify-center rounded-full cursor-pointer"
+                                            className="w-6 h-6 flex items-center justify-center rounded-full cursor-pointer"
                                             role="button"
                                             tabIndex={0}
                                             draggable="false"
@@ -403,12 +403,12 @@ export default function ShortcutFloater() {
                                         onDragStart={() => handleDragStart(shortcut.id)}
                                         onDragOver={handleDragOver}
                                         onDrop={() => handleDrop(shortcut.id)}
-                                        className={`group relative flex items-center justify-center p-[13px] rounded-full bg-white border border-zinc-200 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 cursor-pointer overflow-visible ${draggedShortcutId === shortcut.id ? 'opacity-50 grayscale' : ''}`}
+                                        className={`group relative flex items-center justify-center p-3 rounded-full bg-white border border-zinc-200 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 cursor-pointer overflow-visible ${draggedShortcutId === shortcut.id ? 'opacity-50 grayscale' : ''}`}
                                     >
                                         <a
                                             href={shortcut.url}
                                             onClick={(e) => handleShortcutClick(e, shortcut)}
-                                            className="w-[27px] h-[27px] flex items-center justify-center rounded-full cursor-pointer"
+                                            className="w-6 h-6 flex items-center justify-center rounded-full cursor-pointer"
                                             role="button"
                                             tabIndex={0}
                                             draggable="false"
@@ -439,7 +439,7 @@ export default function ShortcutFloater() {
                                     </div>
                                 ))}
                                 <div
-                                    className="group relative flex items-center justify-center p-[13px] rounded-full bg-white border border-zinc-200 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 cursor-pointer overflow-visible"
+                                    className="group relative flex items-center justify-center p-3 rounded-full bg-white border border-zinc-200 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 cursor-pointer overflow-visible"
                                 >
                                     <a
                                         href="https://chromewebstore.google.com/detail/just-focus/gefaddaengbodpiobpbgblajdboalmgc"
@@ -447,7 +447,7 @@ export default function ShortcutFloater() {
                                             e.preventDefault()
                                             window.open("https://chromewebstore.google.com/detail/just-focus/gefaddaengbodpiobpbgblajdboalmgc", '_blank')
                                         }}
-                                        className="w-[27px] h-[27px] flex items-center justify-center rounded-full cursor-pointer"
+                                        className="w-6 h-6 flex items-center justify-center rounded-full cursor-pointer"
                                         role="button"
                                         tabIndex={0}
                                         draggable="true"
