@@ -492,8 +492,11 @@ export const symbols: SymbolItem[] = [
   {
     id: "54",
     symbol: "🇺🇸",
-    description: { es: { main: "Bandera Yankee" }, en: { main: "USA Flag" } },
-    tags: { es: ["Banderas", "EEUU"], en: ["Flags", "USA"] },
+    description: {
+      es: { main: "Bandera de Estados Unidos", secondary: ["Yankee", "EEUU", "Estados Unidos"] },
+      en: { main: "USA Flag", secondary: ["United States", "US"] },
+    },
+    tags: { es: ["Banderas", "EEUU", "Estados Unidos"], en: ["Flags", "USA", "United States"] },
   },
   {
     id: "55",
@@ -8631,4 +8634,283 @@ export const symbols: SymbolItem[] = [
       en: ["Face", "Gestures", "Curiosity"],
     },
   },
+  {
+    id: "1023",
+    symbol: "🇻🇪",
+    description: {
+      es: { main: "Bandera de Venezuela", secondary: ["Venezuela"] },
+      en: { main: "Flag of Venezuela", secondary: ["Venezuela"] },
+    },
+    tags: { es: ["Banderas"], en: ["Flags"] },
+  },
+  {
+    id: "1024",
+    symbol: "🇵🇾",
+    description: {
+      es: { main: "Bandera de Paraguay", secondary: ["Paraguay"] },
+      en: { main: "Flag of Paraguay", secondary: ["Paraguay"] },
+    },
+    tags: { es: ["Banderas"], en: ["Flags"] },
+  },
+  {
+    id: "1025",
+    symbol: "🇪🇨",
+    description: {
+      es: { main: "Bandera de Ecuador", secondary: ["Ecuador"] },
+      en: { main: "Flag of Ecuador", secondary: ["Ecuador"] },
+    },
+    tags: { es: ["Banderas"], en: ["Flags"] },
+  },
+  {
+    id: "1026",
+    symbol: "🇭🇳",
+    description: {
+      es: { main: "Bandera de Honduras", secondary: ["Honduras"] },
+      en: { main: "Flag of Honduras", secondary: ["Honduras"] },
+    },
+    tags: { es: ["Banderas"], en: ["Flags"] },
+  },
+  {
+    id: "1027",
+    symbol: "🇳🇮",
+    description: {
+      es: { main: "Bandera de Nicaragua", secondary: ["Nicaragua"] },
+      en: { main: "Flag of Nicaragua", secondary: ["Nicaragua"] },
+    },
+    tags: { es: ["Banderas"], en: ["Flags"] },
+  },
+  {
+    id: "1028",
+    symbol: "🇵🇷",
+    description: {
+      es: { main: "Bandera de Puerto Rico", secondary: ["Puerto Rico"] },
+      en: { main: "Flag of Puerto Rico", secondary: ["Puerto Rico"] },
+    },
+    tags: { es: ["Banderas"], en: ["Flags"] },
+  },
+  {
+    id: "1029",
+    symbol: "🇵🇹",
+    description: {
+      es: { main: "Bandera de Portugal", secondary: ["Portugal"] },
+      en: { main: "Flag of Portugal", secondary: ["Portugal"] },
+    },
+    tags: { es: ["Banderas"], en: ["Flags"] },
+  },
+  {
+    id: "1030",
+    symbol: "🇳🇱",
+    description: {
+      es: { main: "Bandera de Países Bajos", secondary: ["Países Bajos", "Holanda"] },
+      en: { main: "Flag of Netherlands", secondary: ["Netherlands", "Holland"] },
+    },
+    tags: { es: ["Banderas"], en: ["Flags"] },
+  },
+  {
+    id: "1031",
+    symbol: "🇦🇺",
+    description: {
+      es: { main: "Bandera de Australia", secondary: ["Australia"] },
+      en: { main: "Flag of Australia", secondary: ["Australia"] },
+    },
+    tags: { es: ["Banderas"], en: ["Flags"] },
+  },
+  {
+    id: "1032",
+    symbol: "🇮🇳",
+    description: {
+      es: { main: "Bandera de India", secondary: ["India"] },
+      en: { main: "Flag of India", secondary: ["India"] },
+    },
+    tags: { es: ["Banderas"], en: ["Flags"] },
+  },
+  {
+    id: "1033",
+    symbol: "🇷🇺",
+    description: {
+      es: { main: "Bandera de Rusia", secondary: ["Rusia"] },
+      en: { main: "Flag of Russia", secondary: ["Russia"] },
+    },
+    tags: { es: ["Banderas"], en: ["Flags"] },
+  },
+  {
+    id: "1034",
+    symbol: "🇬🇧",
+    description: {
+      es: { main: "Bandera de Reino Unido", secondary: ["Reino Unido", "Gran Bretaña"] },
+      en: { main: "Flag of United Kingdom", secondary: ["United Kingdom", "Great Britain", "UK"] },
+    },
+    tags: { es: ["Banderas"], en: ["Flags"] },
+  },
+  {
+    id: "1035",
+    symbol: "🇮🇷",
+    description: {
+      es: { main: "Bandera de Irán", secondary: ["Irán"] },
+      en: { main: "Flag of Iran", secondary: ["Iran"] },
+    },
+    tags: { es: ["Banderas"], en: ["Flags"] },
+  },
+  {
+    id: "1036",
+    symbol: "🇺🇿",
+    description: {
+      es: { main: "Bandera de Uzbekistán", secondary: ["Uzbekistán"] },
+      en: { main: "Flag of Uzbekistan", secondary: ["Uzbekistan"] },
+    },
+    tags: { es: ["Banderas"], en: ["Flags"] },
+  },
+  {
+    id: "1037",
+    symbol: "🇶🇦",
+    description: {
+      es: { main: "Bandera de Qatar", secondary: ["Qatar", "Catar"] },
+      en: { main: "Flag of Qatar", secondary: ["Qatar"] },
+    },
+    tags: { es: ["Banderas"], en: ["Flags"] },
+  },
+  {
+    id: "1038",
+    symbol: "🇸🇦",
+    description: {
+      es: { main: "Bandera de Arabia Saudita", secondary: ["Arabia Saudita"] },
+      en: { main: "Flag of Saudi Arabia", secondary: ["Saudi Arabia"] },
+    },
+    tags: { es: ["Banderas"], en: ["Flags"] },
+  },
+  {
+    id: "1039",
+    symbol: "🇮🇶",
+    description: {
+      es: { main: "Bandera de Irak", secondary: ["Irak"] },
+      en: { main: "Flag of Iraq", secondary: ["Iraq"] },
+    },
+    tags: { es: ["Banderas"], en: ["Flags"] },
+  },
+  {
+    id: "1040",
+    symbol: "🇲🇦",
+    description: {
+      es: { main: "Bandera de Marruecos", secondary: ["Marruecos"] },
+      en: { main: "Flag of Morocco", secondary: ["Morocco"] },
+    },
+    tags: { es: ["Banderas"], en: ["Flags"] },
+  },
+  {
+    id: "1041",
+    symbol: "🇩🇿",
+    description: {
+      es: { main: "Bandera de Argelia", secondary: ["Argelia"] },
+      en: { main: "Flag of Algeria", secondary: ["Algeria"] },
+    },
+    tags: { es: ["Banderas"], en: ["Flags"] },
+  },
+  {
+    id: "1042",
+    symbol: "🇨🇮",
+    description: {
+      es: { main: "Bandera de Costa de Marfil", secondary: ["Costa de Marfil"] },
+      en: { main: "Flag of Ivory Coast", secondary: ["Ivory Coast", "Côte d'Ivoire"] },
+    },
+    tags: { es: ["Banderas"], en: ["Flags"] },
+  },
+  {
+    id: "1043",
+    symbol: "🇹🇳",
+    description: {
+      es: { main: "Bandera de Túnez", secondary: ["Túnez"] },
+      en: { main: "Flag of Tunisia", secondary: ["Tunisia"] },
+    },
+    tags: { es: ["Banderas"], en: ["Flags"] },
+  },
+  {
+    id: "1044",
+    symbol: "🇿🇦",
+    description: {
+      es: { main: "Bandera de Sudáfrica", secondary: ["Sudáfrica"] },
+      en: { main: "Flag of South Africa", secondary: ["South Africa"] },
+    },
+    tags: { es: ["Banderas"], en: ["Flags"] },
+  },
+  {
+    id: "1045",
+    symbol: "🇬🇭",
+    description: {
+      es: { main: "Bandera de Ghana", secondary: ["Ghana"] },
+      en: { main: "Flag of Ghana", secondary: ["Ghana"] },
+    },
+    tags: { es: ["Banderas"], en: ["Flags"] },
+  },
+  {
+    id: "1046",
+    symbol: "🇨🇻",
+    description: {
+      es: { main: "Bandera de Cabo Verde", secondary: ["Cabo Verde"] },
+      en: { main: "Flag of Cape Verde", secondary: ["Cape Verde", "Cabo Verde"] },
+    },
+    tags: { es: ["Banderas"], en: ["Flags"] },
+  },
+  {
+    id: "1047",
+    symbol: "🇭🇹",
+    description: {
+      es: { main: "Bandera de Haití", secondary: ["Haití"] },
+      en: { main: "Flag of Haiti", secondary: ["Haiti"] },
+    },
+    tags: { es: ["Banderas"], en: ["Flags"] },
+  },
+  {
+    id: "1048",
+    symbol: "🇨🇼",
+    description: {
+      es: { main: "Bandera de Curazao", secondary: ["Curazao"] },
+      en: { main: "Flag of Curaçao", secondary: ["Curaçao"] },
+    },
+    tags: { es: ["Banderas"], en: ["Flags"] },
+  },
+  {
+    id: "1049",
+    symbol: "🇳🇿",
+    description: {
+      es: { main: "Bandera de Nueva Zelanda", secondary: ["Nueva Zelanda"] },
+      en: { main: "Flag of New Zealand", secondary: ["New Zealand"] },
+    },
+    tags: { es: ["Banderas"], en: ["Flags"] },
+  },
+  {
+    id: "1050",
+    symbol: "🇭🇷",
+    description: {
+      es: { main: "Bandera de Croacia", secondary: ["Croacia"] },
+      en: { main: "Flag of Croatia", secondary: ["Croatia"] },
+    },
+    tags: { es: ["Banderas"], en: ["Flags"] },
+  },
+  {
+    id: "1051",
+    symbol: "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
+    description: {
+      es: { main: "Bandera de Escocia", secondary: ["Escocia"] },
+      en: { main: "Flag of Scotland", secondary: ["Scotland"] },
+    },
+    tags: { es: ["Banderas"], en: ["Flags"] },
+  },
+  {
+    id: "1052",
+    symbol: "🇳🇴",
+    description: {
+      es: { main: "Bandera de Noruega", secondary: ["Noruega"] },
+      en: { main: "Flag of Norway", secondary: ["Norway"] },
+    },
+    tags: { es: ["Banderas"], en: ["Flags"] },
+  },
+  {
+    id: "1053",
+    symbol: "@",
+    description: {
+      es: { main: "Arroba", secondary: ["Correo", "Email", "At"] },
+      en: { main: "At Sign", secondary: ["Email", "Arroba"] },
+    },
+    tags: { es: ["Símbolos", "Signos", "Puntuación", "Puntuacion"], en: ["Symbols", "Signs", "Punctuation"] },
+  }
 ];
