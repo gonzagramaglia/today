@@ -38,6 +38,13 @@ A fast, accessible, and global collection of emojis and symbols for quick copy a
 - **📋 Instant Copy**: One-click copy with immediate visual feedback.
 - **📂 Organized Library**: Structured categories for Emojis, Expressions, Letters, and Symbols.
 
+### 😎 Emotes (Twitch Emote Collection)
+A dedicated page to browse and copy Twitch emote names from your favorite channels.
+- **📋 Instant Copy**: One-click copy of the emote's Twitch name with visual feedback.
+- **🔎 Smart Search**: Find emotes by name, Twitch name, or semantic tags.
+- **🔗 Channel Links**: Each emote links directly to its Twitch channel.
+- **🎨 Channel Attribution**: Visual badge showing which channel owns each emote.
+
 
 ### 🎮 Antipala Pro (Built-in Minigame)
 A high-stakes arcade survival runner integrated directly into the dashboard.
