@@ -2,7 +2,7 @@
 
 **Your privacy-first, local personal dashboard.**
 
-"Hoy & Today" is a minimalist productivity hub designed to keep your focus sharp and your data persistent. It combines smart note-taking, daily task tracking, and quick navigation in a clean, high-performance interface.
+"Hoy & Today" is a minimalist productivity hub designed to keep your focus sharp and your data persistent. It combines smart note-taking, daily task tracking, and quick navigation in a clean, high-performance interface. Core features run entirely in the browser using Local Storage — no account or server required. Optional cloud features (Supabase auth) are available but not needed for the default experience.
 
 ---
 
