@@ -7,7 +7,7 @@
 
 ## 1. Executive Summary
 
-"Hoy & Today" is a minimalist productivity hub designed to keep your focus sharp and your data persistent. It combines smart note-taking, daily task tracking, and quick navigation in a clean, high-performance interface — all running locally in the browser with zero server-side data storage. A built-in emoji/symbol collection, Twitch emote browser, and arcade minigame round out the experience.
+"Hoy & Today" is a minimalist productivity hub designed to keep your focus sharp and your data persistent. It combines smart note-taking, daily task tracking, and quick navigation in a clean, high-performance interface. Core features run entirely in the browser using Local Storage — no account or server required. A built-in emoji/symbol collection, Twitch emote browser, and arcade minigame round out the experience.
 
 ---
 
@@ -26,7 +26,8 @@ Anyone who wants a fast, private, local productivity dashboard — particularly 
 ## 3. Key Features
 
 ### 📝 Smart Notes
-- Local Storage persistence — notes and tasks stored securely on the local device.
+
+- Local Storage persistence — notes and tasks stored on the local device.
 - Auto-Preservation — a fresh note is automatically generated whenever the workspace is cleared.
 - Rich Formatting — Markdown support (`*bold*`, `_italics_`) and automated link detection.
 - Emoji Support — native emoji integration via quick-insert shortcuts.
@@ -37,20 +38,24 @@ Anyone who wants a fast, private, local productivity dashboard — particularly 
   - Drag & Drop — seamlessly attach media by dropping files onto the workspace.
 
 ### ✅ Focus-Driven Tasks
+
 - Focus Mode — active task creation fades out distractions to keep focus.
 - Daily Reset — daily tasks automatically unchecked every midnight (Argentina Time 🇦🇷).
 - Weekly & Monthly Tasks — persistent checklists with collapsible UI.
 - Safe Management — multi-step confirmation for deletions to prevent data loss.
 
 ### ⏱️ Countdown Timers
+
 - Up to 3 configurable countdown timers with individual collapse and persistence.
 
 ### 🧭 Navigation & Shortcuts
+
 - Shortcut Hub — dynamic, user-configurable shortcuts with auto-loading favicons and drag reordering.
 - Animated Loaders — smooth pulse-loading states for remote data fetching.
 - Floating Links — quick access to Home, Emojis, Emotes, and Minigame.
 
 ### 😎 Emojis (Built-in Symbol Collection)
+
 A fast, accessible, and global collection of 1000+ emojis and symbols for quick copy and pasting.
 - Internationalization — seamless toggle between Spanish 🇪🇸 and English 🇺🇸.
 - Smart Search — find emojis by name (e.g., "Rocket"), category (e.g., "Symbols"), or semantic tags (e.g., #Math, #Office).
@@ -58,6 +63,7 @@ A fast, accessible, and global collection of 1000+ emojis and symbols for quick 
 - Organized Library — structured categories for Emojis, Expressions, Letters, and Symbols.
 
 ### 😎 Emotes (Twitch Emote Collection)
+
 A dedicated page to browse and copy Twitch emote names from favorite channels.
 - Instant Copy — one-click copy of the emote's Twitch name with visual feedback.
 - Smart Search — find emotes by name, Twitch name, or semantic tags.
@@ -65,6 +71,7 @@ A dedicated page to browse and copy Twitch emote names from favorite channels.
 - Channel Attribution — visual badge showing which channel owns each emote.
 
 ### 🎮 Antipala Pro (Built-in Minigame)
+
 A high-stakes arcade survival runner integrated directly into the dashboard.
 - Custom Character — play as a hand in a grabbing position dodging shovels.
 - Multiple Modes — Classic (original experience) and Insane (enhanced challenge with horizontal movement).
@@ -152,10 +159,11 @@ yarn test:coverage     # run with coverage report
 
 ## 8. Security & Privacy
 
-- **No accounts required** — core features work without authentication
-- **Local Storage only** — user data never leaves the browser
-- **No external API calls** — core app is fully offline-capable
-- **Supabase (optional)** — only used for future cloud sync, not required
+- **No accounts required** — core features (notes, tasks, countdowns, shortcuts) work without authentication
+- **Local Storage only** — user-created data (notes, tasks, settings) never leaves the browser
+- **Offline-capable** — core features work without network connectivity once the app is loaded
+- **Network requests** — optional features such as shortcut favicons and Supabase auth may make external requests
+- **Supabase (optional)** — available for future cloud sync, not required for the default experience
 
 ---
 

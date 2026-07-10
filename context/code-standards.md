@@ -93,6 +93,12 @@ export function ComponentName({ lang }: Props) {
 | Pages | `page.tsx` (Next.js convention) | `app/emojis/page.tsx` |
 | Tests | `*.test.{ts,tsx}` | `footer.test.tsx` |
 
+**Legacy exceptions:** The following files use kebab-case or lowercase instead of PascalCase. They predate this standard and are kept as-is to avoid unnecessary churn:
+- `app/components/footer.tsx`
+- `app/components/emojis/symbol-browser.tsx`
+- `app/components/emojis/floating-links.tsx`
+- `app/components/emojis/footer.tsx`
+
 ---
 
 ## Styling
