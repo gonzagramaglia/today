@@ -61,10 +61,27 @@ A high-stakes arcade survival runner integrated directly into the dashboard.
 | **Type Safety** | [**TypeScript**](https://www.typescriptlang.org/) |
 | **Icons** | [**Lucide React**](https://lucide.dev/) |
 | **Web Typography** | [**Geist Sans/Mono**](https://vercel.com/font) |
+| **Testing** | [**Vitest**](https://vitest.dev/) + [**Testing Library**](https://testing-library.com/) |
+| **Code Review** | [**CodeRabbit**](https://coderabbit.ai/) |
+| **Commit Standards** | [**Commitlint**](https://commitlint.js.org/) + [**Husky**](https://typicode.github.io/husky/) |
 
 ---
 
+## 🧪 Testing & Quality
 
+Unit tests run with **Vitest** and **React Testing Library** under a jsdom environment.
+
+```bash
+yarn test              # run all tests
+yarn test:coverage     # run tests with coverage report
+```
+
+- **Coverage thresholds**: 80% minimum on statements, branches, functions, and lines.
+- **Scope**: Contexts, hooks, i18n translations, data integrity, and UI components.
+- **Conventional Commits**: Enforced via Commitlint + Husky pre-commit hooks.
+- **Automated Code Review**: CodeRabbit reviews every PR against `main`.
+
+---
 
 ## 📦 Extensions (Recommended)
 Enhance your flow with these productivity tools:

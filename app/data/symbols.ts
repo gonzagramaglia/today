@@ -3000,12 +3000,6 @@ export const symbols: SymbolItem[] = [
     tags: { es: ["Cuerpo"], en: ["Body"] },
   },
   {
-    id: "364",
-    symbol: "🤙",
-    description: { es: { main: "Mano Loose" }, en: { main: "Loose Hand" } },
-    tags: { es: ["Gestos"], en: ["Gestures"] },
-  },
-  {
     id: "365",
     symbol: "🙌",
     description: {
@@ -4432,15 +4426,6 @@ export const symbols: SymbolItem[] = [
     tags: { es: ["Vehículos"], en: ["Vehicles"] },
   },
   {
-    id: "549",
-    symbol: "🔮",
-    description: {
-      es: { main: "Bola de Cristal", secondary: ["Adivino"] },
-      en: { main: "Crystal Ball", secondary: ["Fortune Teller"] },
-    },
-    tags: { es: ["Magia"], en: ["Magic"] },
-  },
-  {
     id: "550",
     symbol: "🎩",
     description: {
@@ -5599,15 +5584,6 @@ export const symbols: SymbolItem[] = [
     },
   },
   {
-    id: "693",
-    symbol: "🌙",
-    description: { es: { main: "Medialuna" }, en: { main: "Crescent Moon" } },
-    tags: {
-      es: ["Espacio", "Universo", "Clima", "Noche"],
-      en: ["Space", "Universe", "Weather", "Night"],
-    },
-  },
-  {
     id: "694",
     symbol: "🌛",
     description: {
@@ -5705,24 +5681,6 @@ export const symbols: SymbolItem[] = [
     symbol: "🔴",
     description: { es: { main: "Círculo Rojo" }, en: { main: "Red Circle" } },
     tags: { es: ["Formas", "Vehículos"], en: ["Shapes", "Vehicles"] },
-  },
-  {
-    id: "705",
-    symbol: "🏇",
-    description: {
-      es: { main: "Caballo de carreras" },
-      en: { main: "Racehorse" },
-    },
-    tags: { es: ["Animales"], en: ["Animals"] },
-  },
-  {
-    id: "706",
-    symbol: "🎄",
-    description: {
-      es: { main: "Árbol de Navidad" },
-      en: { main: "Christmas Tree" },
-    },
-    tags: { es: ["Invierno", "Plantas"], en: ["Winter", "Plants"] },
   },
   {
     id: "707",
@@ -8018,15 +7976,6 @@ export const symbols: SymbolItem[] = [
         main: "Flag of Dominican Republic",
         secondary: ["Dominican Republic"],
       },
-    },
-    tags: { es: ["Banderas"], en: ["Flags"] },
-  },
-  {
-    id: "967",
-    symbol: "🇵🇪",
-    description: {
-      es: { main: "Bandera de Perú", secondary: ["Perú"] },
-      en: { main: "Flag of Peru", secondary: ["Peru"] },
     },
     tags: { es: ["Banderas"], en: ["Flags"] },
   },
