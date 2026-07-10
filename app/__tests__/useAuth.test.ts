@@ -2,15 +2,11 @@ import { describe, it, expect, vi } from "vitest";
 import { renderHook } from "@testing-library/react";
 import { useAuth } from "../hooks/useAuth";
 
-// Mock supabase client
+// Mock supabase client — hook only exposes the client instance directly,
+// so a minimal stub with an auth namespace is sufficient.
 vi.mock("@/utils/supabase/client", () => ({
     createClient: () => ({
-        auth: {
-            getUser: vi.fn(),
-            onAuthStateChange: vi.fn(() => ({
-                data: { subscription: { unsubscribe: vi.fn() } },
-            })),
-        },
+        auth: {},
     }),
 }));
 

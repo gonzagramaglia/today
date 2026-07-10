@@ -78,8 +78,8 @@ yarn test:coverage     # run tests with coverage report
 
 - **Coverage thresholds**: 80% minimum on statements, branches, functions, and lines.
 - **Scope**: Contexts, hooks, i18n translations, data integrity, and UI components.
-- **Conventional Commits**: Enforced via Commitlint + Husky pre-commit hooks.
-- **Automated Code Review**: CodeRabbit reviews every PR against `main`.
+- **Conventional Commits**: Enforced via Commitlint + Husky `commit-msg` hook.
+- **Automated Code Review**: CodeRabbit reviews every non-draft PR against `main`.
 
 ---
 

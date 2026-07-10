@@ -9,7 +9,7 @@ Follow this template exactly so every PR is consistent, professional, and easy t
 
 Follows Conventional Commits. Must be under 50 characters to avoid GitHub truncation.
 
-```
+```text
 <type>(<scope>): <short description>
 ```
 
@@ -96,7 +96,7 @@ When GitHub asks for the Extended Description during the merge, use this bullet 
 
 Branches follow the pattern:
 
-```
+```text
 <type>/<short-kebab-description>
 ```
 

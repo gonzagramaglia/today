@@ -19,33 +19,29 @@ function TestConsumer() {
     );
 }
 
+function renderConsumer() {
+    return render(
+        <LanguageProvider>
+            <TestConsumer />
+        </LanguageProvider>
+    );
+}
+
 describe("LanguageContext", () => {
     it("provides default language as es", () => {
-        render(
-            <LanguageProvider>
-                <TestConsumer />
-            </LanguageProvider>
-        );
+        renderConsumer();
         expect(screen.getByTestId("language").textContent).toBe("es");
     });
 
     it("translates keys correctly in es", () => {
-        render(
-            <LanguageProvider>
-                <TestConsumer />
-            </LanguageProvider>
-        );
+        renderConsumer();
         expect(screen.getByTestId("translation").textContent).toBe(
             "Buscar emoji o etiqueta..."
         );
     });
 
     it("allows switching language to en", () => {
-        render(
-            <LanguageProvider>
-                <TestConsumer />
-            </LanguageProvider>
-        );
+        renderConsumer();
         act(() => {
             screen.getByText("switch-en").click();
         });
@@ -56,11 +52,7 @@ describe("LanguageContext", () => {
     });
 
     it("allows switching back to es", () => {
-        render(
-            <LanguageProvider>
-                <TestConsumer />
-            </LanguageProvider>
-        );
+        renderConsumer();
         act(() => {
             screen.getByText("switch-en").click();
         });
