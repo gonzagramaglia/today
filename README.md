@@ -2,7 +2,7 @@
 
 **Your privacy-first, local personal dashboard.**
 
-"Hoy & Today" is a minimalist productivity hub designed to keep your focus sharp and your data persistent. It combines smart note-taking, daily task tracking, and quick navigation in a clean, high-performance interface.
+"Hoy & Today" is a minimalist productivity hub designed to keep your focus sharp and your data persistent. It combines smart note-taking, daily task tracking, and quick navigation in a clean, high-performance interface — all running locally in the browser with zero server-side data storage. A built-in emoji/symbol collection, Twitch emote browser, and arcade minigame round out the experience.
 
 ---
 

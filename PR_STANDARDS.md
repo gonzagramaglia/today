@@ -114,6 +114,7 @@ Branches follow the pattern:
 
 | PR | Branch | Description | Status |
 |----|--------|-------------|--------|
-| #1 | `feat/coderabbit-and-tests` | Vitest setup, unit tests, CodeRabbit config & 80% coverage | 🟡 Open |
+| #1 | `feat/coderabbit-and-tests` | Vitest setup, unit tests, CodeRabbit config & 80% coverage | ✅ Merged |
+| #2 | `docs/agent-context-files` | AGENTS.md, CLAUDE.md, context/ docs, project report | 🟡 Open |
 
 *(Update this table every time a PR is opened or merged.)*
